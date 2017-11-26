@@ -10,7 +10,7 @@
     "gulp": "github:gulpjs/gulp#4.0",
     "htmlhint": "^0.9.13",
     "husky": "^0.13.4",
-    "joes-gulp-tasks": "^0.5.0-0"
+    "joes-gulp-tasks": "^0.5.2"
   },
   "scripts": {
     "precommit": "npm test",

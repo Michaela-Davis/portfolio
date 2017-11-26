@@ -14,15 +14,13 @@ module.exports = {
     reloadDebounce: 750,
   },
   css: {
-    enabled: false,
+    enabled: true,
     source: [
       'src/scss/styles.scss',
     ],
     dependencies: [
-      ''
     ],
     includePaths: [
-
     ],
     dest: 'build/css/',
     dependenciesDest: 'build/css/',
@@ -55,12 +53,12 @@ module.exports = {
     uglify: false,
     sourceMap: false,
     includePaths: [
-      'src/canvas/js/jquery.js',
-      'src/canvas/js/jquery.gmap.js',
-      'src/canvas/js/plugins.js',
-      'src/canvas/js/functions.js',
-      'src/canvas/js/lodash.js',
-      'src/canvas/js/hwd.ts.js',
+      // 'src/canvas/js/jquery.js',
+      // 'src/canvas/js/jquery.gmap.js',
+      // 'src/canvas/js/plugins.js',
+      // 'src/canvas/js/functions.js',
+      // 'src/canvas/js/lodash.js',
+      // 'src/canvas/js/hwd.ts.js',
     ],
     eslint: {
       enabled: false,
