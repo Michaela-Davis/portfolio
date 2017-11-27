@@ -1,3 +1,343 @@
-body {
-  background-color: lightgray;
+@import "/**/*.scss";
+
+// Colors
+$white-grey: #d9d9d9;
+$smoke: #8d8d8d;
+$green: #45bf55;
+$charcoal: #333;
+$black: #000;
+
+// Override _Reboot
+
+label {
+  display: block;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+input[type="submit"] {
+  background: $green;
+  border: none;
+  width: auto;
+  text-align: center;
+  padding: 10px 25px;
+  color: $white-grey;
+}
+
+// Typography
+
+$font-primary: 'Fjalla One', sans-serif;
+$font-copy: 'Lato', sans-serif;
+
+@mixin font-colors($primary: $green, $secondary: $white-grey) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $primary;
+  }
+
+  a,
+  p,
+  li,
+  span {
+    color: $secondary;
+  }
+
+  a:hover {
+    color: darken($secondary, 50%);
+  }
+}
+
+@include font-colors();
+
+h1 {
+  font-size: 4rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-primary;
+  font-weight: 700;
+}
+
+a,
+p,
+li,
+span {
+  font-family: $font-copy;
+  color: $smoke;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+.short-break {
+  border-top: 2px solid $green;
+  width: 150px;
+
+  @media screen and (min-width: 992px) {
+    width: 300px;
+  }
+}
+
+.btn {
+  border: dashed 3px green;
+}
+
+.navbar {
+  position: fixed;
+  z-index: 10;
+  right: 0;
+
+  &-nav {
+    flex-direction: column !important;
+  }
+
+  &-brand {
+    font-family: $font-primary;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+
+  &--green {
+    background-color: $green;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $green;
+    }
+
+    a {
+      color: $black;
+      text-shadow: 2px 1px 1px rgba(110, 110, 110, 0.5);
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+      color: $charcoal;
+      text-shadow: 2px 1px 1px rgba(39, 39, 39, 0.2);
+      text-decoration: underline;
+    }
+  }
+}
+
+.section {
+  padding: 30px 0;
+
+  @media screen and (min-width: 992px) {
+    padding: 60px 0;
+  }
+
+  &__heading {
+    margin-bottom: 45px;
+    border-bottom: solid 2px $green;
+    text-shadow: 1px 2px 2px black;
+    letter-spacing: 1.8px;
+  }
+
+  &__title {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  &--lighter-grey {
+    background-color: $white-grey;
+
+    @include font-colors($green, $charcoal);
+  }
+
+  &--light-grey {
+    background-color: $smoke;
+
+    @include font-colors($green, $charcoal);
+  }
+
+  &--dark-grey {
+    background-color: $charcoal;
+
+    @include font-colors($green, $white-grey);
+  }
+
+  &--black {
+    background-color: $black;
+
+    @include font-colors($green, $green);
+  }
+}
+
+.marquee {
+  position: relative;
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0.65)
+    ),
+    url(../assets/computer.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+
+  &__content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+  }
+
+  &__title {
+    text-shadow: 1px 3px 6px black;
+  }
+}
+
+.about {
+  &__image {
+    width: 300px;
+    max-width: 50%;
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+.contact {
+  label {
+    color: $green;
+  }
+
+  form {
+    margin-bottom: 30px;
+    margin-top: 15px;
+  }
+}
+
+.list {
+  li a {
+    color: $green;
+    text-shadow: 1px 1px 0.5px rgba(0, 0, 0, 0.51);
+    text-decoration: underline;
+  }
+
+  &__title--collapsing {
+    &::after {
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: '\f0d7';
+    }
+
+    &.collapsed::after {
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: '\f0da';
+    }
+  }
+}
+
+.skill {
+  text-align: center;
+
+  &__title {
+    color: $black !important;
+    text-align: left;
+  }
+
+  &__subtitle {
+    text-align: left;
+  }
+
+  &__copy {
+    text-align: left;
+  }
+
+  &__icon {
+    margin: 20px auto 50px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $charcoal;
+    transform: rotate(45deg);
+
+    i {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.project {
+  border-radius: 0;
+  padding: 45px 35px;
+  margin: 45px 0;
+
+  @include font-colors($black, $charcoal);
+
+  &__title {
+    text-shadow: 1px 2px 2px #000;
+    color: $green !important;
+    letter-spacing: 1.8px;
+  }
+
+  &__sub-title {
+    font-weight: 700;
+  }
+
+  &__thumbnail {
+    width: 300px;
+    max-width: 100%;
+    margin: 0 8px 15px;
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.35);
+  }
+
+  &--lighter-grey {
+    background-color: $white-grey;
+  }
+
+  &--light-grey {
+    background-color: $smoke;
+  }
+
+  &--dark-grey {
+    background-color: $charcoal;
+  }
+
+  &--black {
+    background-color: $black;
+  }
+}
+
+// .tyson-steele-thumbnails {
+//   width: 100%;
+//   display: flex;
+//   justify-content: center;
+//   flex-wrap: wrap;
+
+//   @media screen and (min-width: 992px) {
+//     display: inherit;
+//     width: inherit;
+//   }
+// }
+
+.social-media-icon {
+  margin: 15px 30px 0;
 }
