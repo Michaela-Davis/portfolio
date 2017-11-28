@@ -3,9 +3,15 @@
 // Colors
 $white-grey: #d9d9d9;
 $smoke: #8d8d8d;
-$green: #45bf55;
-$charcoal: #333;
-$black: #000;
+$green: #589795;
+$charcoal: #262322;
+$black: #1b1919;
+
+// $white-grey: #d9d9d9;
+// $smoke: #8d8d8d;
+// $green: #45bf55;
+// $charcoal: #333;
+// $black: #000;
 
 // Override _Reboot
 
@@ -29,7 +35,7 @@ input[type="submit"] {
 
 // Typography
 
-$font-primary: 'Fjalla One', sans-serif;
+$font-primary: 'Shadows Into Light Two', cursive;
 $font-copy: 'Lato', sans-serif;
 
 @mixin font-colors($primary: $green, $secondary: $white-grey) {
@@ -82,69 +88,22 @@ ul {
   padding-left: 20px;
 }
 
-.short-break {
-  border-top: 2px solid $green;
-  width: 150px;
-
-  @media screen and (min-width: 992px) {
-    width: 300px;
-  }
-}
-
 .btn {
-  border: dashed 3px green;
-}
-
-.navbar {
-  position: fixed;
-  z-index: 10;
-  right: 0;
-
-  &-nav {
-    flex-direction: column !important;
-  }
-
-  &-brand {
-    font-family: $font-primary;
-    font-weight: 700;
-    font-size: 2rem;
-  }
-
-  &--green {
-    background-color: $green;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-      background-color: $green;
-    }
-
-    a {
-      color: $black;
-      text-shadow: 2px 1px 1px rgba(110, 110, 110, 0.5);
-    }
-
-    a:hover,
-    a:focus,
-    a:active {
-      color: $charcoal;
-      text-shadow: 2px 1px 1px rgba(39, 39, 39, 0.2);
-      text-decoration: underline;
-    }
-  }
+  border: dashed 3px $green;
 }
 
 .section {
-  padding: 30px 0;
+  padding: 20px 0;
 
   @media screen and (min-width: 992px) {
-    padding: 60px 0;
+    padding: 30px 0;
   }
 
   &__heading {
     margin-bottom: 45px;
-    border-bottom: solid 2px $green;
+    border-bottom: solid 4px $green;
     text-shadow: 1px 2px 2px black;
-    letter-spacing: 1.8px;
+    letter-spacing: 5px;
   }
 
   &__title {
@@ -177,38 +136,25 @@ ul {
   }
 }
 
-.marquee {
-  position: relative;
-  background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.85),
-      rgba(0, 0, 0, 0.65)
-    ),
-    url(../assets/computer.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-
-  &__content {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-  }
-
-  &__title {
-    text-shadow: 1px 3px 6px black;
-  }
-}
-
 .about {
-  &__image {
-    width: 300px;
-    max-width: 50%;
-    margin-right: 15px;
-    margin-bottom: 15px;
+  &__art {
+    background-image: url('/assets/mDelightNov2017.jpg');
+    background-size: cover;
+    max-width: 300px;
+
+    &__title {
+      color: $white-grey !important;
+      text-align: center;
+      font-size: 65px;
+      text-shadow: 2px 2px 2px black;
+      letter-spacing: 3px;
+    }
+  }
+
+  &__headshot {
+    background-image: url('/assets/michaela.jpg');
+    background-size: cover;
+    max-width: 300px;
   }
 }
 
@@ -228,28 +174,6 @@ ul {
     color: $green;
     text-shadow: 1px 1px 0.5px rgba(0, 0, 0, 0.51);
     text-decoration: underline;
-  }
-
-  &__title--collapsing {
-    &::after {
-      display: inline-block;
-      font: normal normal normal 14px/1 FontAwesome;
-      font-size: inherit;
-      text-rendering: auto;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      content: '\f0d7';
-    }
-
-    &.collapsed::after {
-      display: inline-block;
-      font: normal normal normal 14px/1 FontAwesome;
-      font-size: inherit;
-      text-rendering: auto;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      content: '\f0da';
-    }
   }
 }
 
@@ -286,20 +210,22 @@ ul {
 }
 
 .project {
-  border-radius: 0;
+  border-radius: 15px;
   padding: 45px 35px;
   margin: 45px 0;
+  border: solid 4px $green;
 
   @include font-colors($black, $charcoal);
 
   &__title {
     text-shadow: 1px 2px 2px #000;
     color: $green !important;
-    letter-spacing: 1.8px;
+    letter-spacing: 5px;
   }
 
   &__sub-title {
-    font-weight: 700;
+    letter-spacing: 3px;
+    margin-left: 25px;
   }
 
   &__thumbnail {
@@ -310,7 +236,8 @@ ul {
   }
 
   &--lighter-grey {
-    background-color: $white-grey;
+    background-color: #fff;
+    // background-color: $white-grey;
   }
 
   &--light-grey {

@@ -2,18 +2,23 @@
 
 <section class="section about section--dark-grey" id="about">
     <div class="container">
-        <div class="section__heading">
-            <h2 class="section__title">About Me</h2>
-        </div>
         <div class="section__content">
-            <img src="/assets/michaela.jpg" class="about__image" alt="Michaela Davis, Developer">
-            <p>Hi!</p>
-            <p>I'm going to say stuff about me here</p>
+            <div class="row">
+                <div class="col-6 col-md-4 about__art">
+                    <h2 class="about__art__title">Hi!<br>I'm<br>Michaela...</h2>
+                </div>
+                <div class="col-6 col-md-4">
+                    <p>I have client and server-side full-stack experience. I'm interested in Frontend, Drupal, Atomic Design, Components, and Design Prototyping.<br> I received a Psychology degree with Honors and minors in Communication Studies and Human & Family Development from The University of Montana. In my spare time, I love to play board games and do art.</p>
+                </div>
+                <div class="col-6 col-md-4">
+                    <img src="/assets/michaela.jpg" class="about__headshot" alt="Michaela Davis, Developer">
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<section class="section portfolio" id="portfolio">
+<section class="section portfolio section--dark-grey" id="portfolio">
     <div class="container">
     
         <div class="section__heading">
@@ -21,42 +26,90 @@
         </div>
 
         <div class="section__content">
-            <h3 class="project__title">Tyson Steele</h3>
-            <h4 class="project__sub-title">Developer</h4>
-            <p class="project__description">Tyson Steele does online marketing for hundreds of dentists across the US. As a developer on this project, I am responsible for turning client mockups into fully responsive websites and hosting the sites on a development server.</p>
 
-            <ul id="tysonsteelesites" style="">
-                <li><a href="https://www.bcdds.com/" target="_blank">Dr. B.C. Nelson</a></li>
-                <li><a href="https://www.bigskydentalclinic.com/" target="_blank">Dr. Chris Clave</a></li>
-                <li><a href="https://www.drhenningsen.com/" target="_blank">Dr. Brian Henningsen</a></li>
-            </ul>
+            <article class="project project--lighter-grey">
+                <h3 class="project__title">Tyson Steele</h3> 
+                <h4 class="project__sub-title">Developer</h4>
+                <p class="project__description">Tyson Steele does online marketing for hundreds of dentists across the US. As a developer on this project, I am responsible for turning client mockups into fully responsive websites and hosting the sites on a development server. I completed 10 sites from start to finish in less than 5 months!</p>
 
-            <h3 class="project__title">Proud Ground</h3>
-            <h4 class="project__sub-title">Developer</h4>
-            <p class="project__description">Proud Ground is a Portland, OR based non-profit that creates permanently affordable homeownership opportunities for first-time homebuyers. As a developer on this project, I am responsible for site maitinence and minor site updates.</p>
-            <img src="/assets/screenshots/proudground.png" class="project__thumbnail" alt="Proud Ground">
-                {# https://proudground.org/ #}
-            
-            <h3 class="project__title">Solid Digital</h3>
-            <h4 class="project__sub-title">Web Development Intern</h4>
-            <p class="project__description">Worked on an internal project using APIs, Express, MongoDB, Mongoose, and Pug templating along with Vue.js to pull and display user reporting data from GitLab. Created a general README template and integrated it into existing Node.js and Wordpress templates.</p>
-                4 screenshots - check w/ Jonathan to make sure ok
+                <div class="row">
+                    <div class="col-6 col-md-4">
+                        <a href="https://www.bcdds.com/" target="_blank">
+                        <img src="/assets/screenshots/drNelson.png" class="project__thumbnail" alt="Dr. B.C. Nelson"></a>
+                    </div>
+
+                    <div class="col-6 col-md-4">
+                        <a href="https://www.bigskydentalclinic.com/" target="_blank">
+                        <img src="/assets/screenshots/drClave.png" class="project__thumbnail" alt="Dr. Chris Clave"></a>
+                    </div>
+
+                    <div class="col-6 col-md-4">
+                        <a href="https://www.drhenningsen.com/" target="_blank">
+                        <img src="/assets/screenshots/drHenningsen.png" class="project__thumbnail" alt="Dr. Brian Henningsen"></a>
+                    </div>
+                </div>
+
+            </article>
+
+            <article class="project project--lighter-grey">
+                <h3 class="project__title">Proud Ground</h3>
+                <h4 class="project__sub-title">Developer</h4>
+                <p class="project__description">Proud Ground is a Portland, OR based non-profit that creates permanently affordable homeownership opportunities for first-time homebuyers. As a developer on this project, I am responsible for site maitinence and minor site updates.</p>
+                <a href="https://proudground.org/" target="_blank">
+                    <img src="/assets/screenshots/proudground.png" class="project__thumbnail" alt="Proud Ground">
+                </a>
+                    {# https://proudground.org/ #}
+            </article>
+
+            <article class="project project--lighter-grey">
+                <h3 class="project__title">Solid Digital</h3>
+                <h4 class="project__sub-title">Web Development Intern</h4>
+                <p class="project__description">Worked on an internal project using APIs, Express, MongoDB, Mongoose, and Pug templating along with Vue.js to pull and display user reporting data from GitLab. Created a general README template and integrated it into existing Node.js and Wordpress templates.</p>
+                <p>4 screenshots - check w/ Jonathan to make sure ok </p>
+                <div class="row">
+                    <div class="col-6 col-md-3">
+                        <img src="/assets/screenshots/solidPlaceholder.png" class="project__thumbnail" alt="Solid Placeholder">
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <img src="/assets/screenshots/solidPlaceholder.png" class="project__thumbnail" alt="Solid Placeholder">
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <img src="/assets/screenshots/solidPlaceholder.png" class="project__thumbnail" alt="Solid Placeholder">
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <img src="/assets/screenshots/solidPlaceholder.png" class="project__thumbnail" alt="Solid Placeholder">
+                    </div>
+                </div>
+            </article>
         
-            <h3 class="project__title">Epicodus</h3>
-            <h4 class="project__sub-title">Web Bootcamp Student</h4>
-            <p class="project__description">Completed course-work on PHP, JavaScript, and Drupal, along with various frameworks (Angular 2, Silex, etc.) and HTML/CSS. Learned how to work with other programmers through peer-programming, as well as developing problem-solving techniques.</p>
+            <article class="project project--lighter-grey">
+                <h3 class="project__title">Epicodus</h3>
+                <h4 class="project__sub-title">Web Bootcamp Student</h4>
+                <p class="project__description">Completed course-work on PHP, JavaScript, and Drupal, along with various frameworks (Angular 2, Silex, etc.) and HTML/CSS. Learned how to work with other programmers through peer-programming, as well as developing problem-solving techniques.</p>
 
-            <ul id="epicodus" style="">
-                <li><a href="http://dev-whitewater.pantheonsite.io/" target="_blank"> Drupal 8: Whitewater</a></li>
-                <li><a href="http://dev-verbatim.pantheonsite.io/" target="_blank">Drupal 7: Verbatim (received 1st Drupal Golden Dino)</a></li>
-                <li><a href="ttps://whitewater-8efd7.firebaseapp.com/" target="_blank">JavaScript/Angular 2/Firebase: Sunny Days Whitewater</a></li>
-            </ul>
+                <div class="row">
+                    <div class="col-6 col-md-4">
+                        <a href="http://dev-whitewater.pantheonsite.io/" target="_blank"> <p>Drupal 8: Whitewater</p> <img src="/assets/screenshots/drupal8Whitewater.png" class="project__thumbnail" alt="Drupal 8 Whitewater Project"></a>
+                    </div>
+
+                    <div class="col-6 col-md-4">
+                        <a href="http://dev-verbatim.pantheonsite.io/" target="_blank">Drupal 7: Verbatim (received 1st Drupal Golden Dino)<img src="/assets/screenshots/drupal7Verbatim.png" class="project__thumbnail" alt="Drupal 7 Verbatim Project"></a>
+                    </div>
+
+                    <div class="col-6 col-md-4">
+                        <a href="https://whitewater-8efd7.firebaseapp.com/" target="_blank">Angular 2/Firebase: Sunny Days Whitewater<img src="/assets/screenshots/angularSunnyDays.png" class="project__thumbnail" alt="JavaScript/Angular 2/Firebase: Sunny Days Whitewater"></a>
+                    </div>
+                </div>
+
+
+
+            </article>
         </div>
 
     </div>
 </section>
 
-<section class="section skills" id="skills">
+<section class="section skills section--dark-grey" id="skills">
     <div class="container">
     
         <div class="section__heading">
@@ -120,7 +173,7 @@
     </div>
 </section>
 
-<section class="section contact" id="contact">
+<section class="section contact section--lightest-grey" id="contact">
     <div class="container">
         <div class="section__heading">
             <h2 class="section__title">Contact Me</h2>
@@ -146,9 +199,8 @@
                         </div>
                     </form>
                 </div>
-                <div class="col-sm-2"></div>
                 <div class="col-sm">
-                    <h3>... Or Check Me Out on Social Media!</h3>
+                    <h3>Social Media</h3>
                     <div class="social-media">
                         <a href="https://linkedin.com/in/michaela-davis" class="social-media__link">
                             <i class="fa fa-3x fa-linkedin-square social-media-icon" aria-hidden="true"></i>
@@ -156,13 +208,32 @@
                         <a href="https://github.com/Michaela-Davis" class="social-media__link">
                             <i class="fa fa-3x fa-github-square social-media-icon" aria-hidden="true"></i>
                         </a>
+                        <a href="https://www.instagram.com/handmaderevival" class="social-media__link">
+                            <i class="fa fa-3x fa-instagram social-media-icon" aria-hidden="true"></i>
+                        </a>
                     </div>
+                </div>
+                <div class="col-sm-4">
+                    <h3>P.S. This stuff is awesome!</h3>
+                     <h5 class="list__title">Design</h5>
+                    <ul>
+                        <li>http://atomicdesign.bradfrost.com/</li>
+                    </ul>
+                    <h5 class="list__title">CSS</h5>
+                    <ul>
+                        <li>https://css-tricks.com/</li>
+                        <li>https://flexboxfroggy.com</li>
+                    </ul>
+                    <h5 class="list__title">Books</h5>
+                        <ul>
+                            <li>JavaScript & jQuery</li>
+                            <li>Grokking Algorithms</li>
+                        </ul>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 
 </body>
 </html>
