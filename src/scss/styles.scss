@@ -1,19 +1,16 @@
 @import "/**/*.scss";
 
 // Colors
-$white-grey: #d9d9d9;
+$white: #fff;
 $smoke: #8d8d8d;
-$green: #589795;
+$blue: #589795;
 $charcoal: #262322;
 $black: #1b1919;
 
-// $white-grey: #d9d9d9;
-// $smoke: #8d8d8d;
-// $green: #45bf55;
-// $charcoal: #333;
-// $black: #000;
-
 // Override _Reboot
+img {
+  max-width: 100%;
+}
 
 label {
   display: block;
@@ -25,20 +22,35 @@ textarea {
 }
 
 input[type="submit"] {
-  background: $green;
+  background: $blue;
   border: none;
   width: auto;
   text-align: center;
   padding: 10px 25px;
-  color: $white-grey;
+  color: $white;
+}
+
+// Helper/Utility Classes
+.row {
+  &--center {
+    justify-content: center;
+  }
+}
+
+.space-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.center {
+  text-align: center;
 }
 
 // Typography
-
 $font-primary: 'Shadows Into Light Two', cursive;
 $font-copy: 'Lato', sans-serif;
 
-@mixin font-colors($primary: $green, $secondary: $white-grey) {
+@mixin font-colors($primary: $blue, $secondary: $white) {
   h1,
   h2,
   h3,
@@ -89,7 +101,7 @@ ul {
 }
 
 .btn {
-  border: dashed 3px $green;
+  border: dashed 3px $blue;
 }
 
 .section {
@@ -101,7 +113,7 @@ ul {
 
   &__heading {
     margin-bottom: 45px;
-    border-bottom: solid 4px $green;
+    border-bottom: solid 4px $blue;
     text-shadow: 1px 2px 2px black;
     letter-spacing: 5px;
   }
@@ -112,55 +124,93 @@ ul {
   }
 
   &--lighter-grey {
-    background-color: $white-grey;
+    background-color: $white;
 
-    @include font-colors($green, $charcoal);
+    @include font-colors($blue, $charcoal);
   }
 
   &--light-grey {
     background-color: $smoke;
 
-    @include font-colors($green, $charcoal);
+    @include font-colors($blue, $charcoal);
   }
 
   &--dark-grey {
     background-color: $charcoal;
 
-    @include font-colors($green, $white-grey);
+    @include font-colors($blue, $white);
   }
 
   &--black {
     background-color: $black;
 
-    @include font-colors($green, $green);
+    @include font-colors($blue, $blue);
   }
 }
 
 .about {
+  padding-top: 35px;
+  justify-content: space-between;
+
   &__art {
     background-image: url('/assets/mDelightNov2017.jpg');
     background-size: cover;
-    max-width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     &__title {
-      color: $white-grey !important;
+      color: $white !important;
       text-align: center;
       font-size: 65px;
       text-shadow: 2px 2px 2px black;
       letter-spacing: 3px;
+      padding: 15px;
+    }
+  }
+
+  &__intro {
+    padding: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media screen and (min-width: 768px) {
+      padding: 55px;
+    }
+
+    @media screen and (min-width: 992px) {
+      padding: 15px;
+    }
+
+    p {
+      text-indent: 25px;
+      text-align: justify;
+    }
+
+    &__last {
+      margin-bottom: 0;
     }
   }
 
   &__headshot {
-    background-image: url('/assets/michaela.jpg');
-    background-size: cover;
-    max-width: 300px;
+    width: 100%;
+
+    @media screen and (max-width: 991px) {
+      max-width: 300px;
+    }
+  }
+
+  div:last-child {
+    text-align: center;
   }
 }
 
 .contact {
   label {
-    color: $green;
+    color: $blue;
   }
 
   form {
@@ -171,17 +221,20 @@ ul {
 
 .list {
   li a {
-    color: $green;
+    color: $blue;
     text-shadow: 1px 1px 0.5px rgba(0, 0, 0, 0.51);
     text-decoration: underline;
+  }
+
+  &__title {
+    letter-spacing: 2px;
   }
 }
 
 .skill {
-  text-align: center;
+  padding-top: 0;
 
   &__title {
-    color: $black !important;
     text-align: left;
   }
 
@@ -192,40 +245,32 @@ ul {
   &__copy {
     text-align: left;
   }
-
-  &__icon {
-    margin: 20px auto 50px;
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $charcoal;
-    transform: rotate(45deg);
-
-    i {
-      transform: rotate(-45deg);
-    }
-  }
 }
 
 .project {
   border-radius: 15px;
   padding: 45px 35px;
   margin: 45px 0;
-  border: solid 4px $green;
+  border: solid 4px $blue;
 
   @include font-colors($black, $charcoal);
 
   &__title {
+    display: inline-block;
     text-shadow: 1px 2px 2px #000;
-    color: $green !important;
+    color: $blue !important;
     letter-spacing: 5px;
   }
 
   &__sub-title {
+    display: inline-block;
     letter-spacing: 3px;
     margin-left: 25px;
+  }
+
+  &__description {
+    padding: 15px 20px;
+    text-indent: 25px;
   }
 
   &__thumbnail {
@@ -236,8 +281,7 @@ ul {
   }
 
   &--lighter-grey {
-    background-color: #fff;
-    // background-color: $white-grey;
+    background-color: $white;
   }
 
   &--light-grey {
@@ -252,18 +296,6 @@ ul {
     background-color: $black;
   }
 }
-
-// .tyson-steele-thumbnails {
-//   width: 100%;
-//   display: flex;
-//   justify-content: center;
-//   flex-wrap: wrap;
-
-//   @media screen and (min-width: 992px) {
-//     display: inherit;
-//     width: inherit;
-//   }
-// }
 
 .social-media-icon {
   margin: 15px 30px 0;
