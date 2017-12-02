@@ -1,6 +1,6 @@
 {% include '/meta/head.twig' %}
 
-<section class="section about section--dark-grey" id="about">
+{# <section class="section about section--dark-grey" id="about">
     <div class="container">
         <div class="section__content">
             <div class="row about">
@@ -24,7 +24,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> #}
 
 <section class="section portfolio section--dark-grey" id="portfolio">
     <div class="container">
@@ -35,6 +35,7 @@
 
         <div class="section__content">
 
+            {# Tyson Steele #}
             <article class="project project--lighter-grey">
                 <h3 class="project__title">Tyson Steele</h3> 
                 <h4 class="project__sub-title">Developer</h4>
@@ -58,40 +59,67 @@
                 </div>
             </article>
 
+            {# Proud Ground #}
             <article class="project project--lighter-grey">
                 <h3 class="project__title">Proud Ground</h3>
                 <h4 class="project__sub-title">Developer</h4>
                 <p class="project__description">Proud Ground is a Portland, OR based non-profit that creates permanently affordable homeownership opportunities for first-time homebuyers. As a developer on this project, I am responsible for site maitinence and minor site updates.</p>
                 <div class="row row--center">
-                    <div class="col-6 col-md-4">
+
+                    {# visible-sm and down (hidden-md and up) #}
+                    <div class="space-around">
+                        <div class="col-12 d-sm-block d-md-none d-lg-none d-xl-none">
+                            <a href="https://proudground.org/" target="_blank">
+                                <img src="/assets/screenshots/proudground.png" class="project__thumbnail" alt="Proud Ground">
+                            </a>
+                        </div>
+                    </div>
+
+                    {# visible-md and up (hidden-sm and down) #}
+                    <div class="col-md-4 d-none d-md-block">
                         <a href="https://proudground.org/" target="_blank">
                             <img src="/assets/screenshots/proudground.png" class="project__thumbnail" alt="Proud Ground">
                         </a>
                     </div>
+
                 </div>
             </article>
 
+            {# Solid Digital #}
             <article class="project project--lighter-grey">
                 <h3 class="project__title">Solid Digital</h3>
                 <h4 class="project__sub-title">Web Development Intern</h4>
-                <p class="project__description">Worked with another Epicodus intern on an internal project using APIs, Express, MongoDB, Mongoose, and Pug templating along with Vue.js to pull and display user reporting data from GitLab. I designed and styled the user interface for the internal project (see screenshots of before and after below). Created a general README template and integrated it into existing Node.js and Wordpress templates. </p>
-                <p>Checking w/ Solid's CTO about NDA before posting actual</p>
+                <p class="project__description">Worked with another Epicodus intern at Solid Digital (previously Solid Interactive) to create an internal "Merge Requests Dashboard" using APIs, Express, MongoDB, Mongoose, and Pug templating along with Vue.js to pull and display user reporting data from GitLab. I designed and styled the user interface for the internal project (see screenshots of before and after below) as well as creating the individual user pages. Created a general README template and integrated it into existing Node.js and Wordpress templates. </p>
+                {# <p style="color:red;">Checking w/ Solid's CTO about NDA before posting actual</p> #}
                 <div class="row">
                     <div class="col-6 col-md-3">
-                        <img src="/assets/screenshots/solidPlaceholder.png" class="project__thumbnail" alt="Solid Placeholder">
+                        <div class="space-around">
+                            <a href="https://www.soliddigital.com/" target="_blank"> <p class="center">Dashboard Home:<br>BEFORE</p>
+                            <img src="/assets/screenshots/solidPlaceholder.png" class="project__thumbnail" alt="Solid Placeholder"></a>
+                        </div>
                     </div>
                     <div class="col-6 col-md-3">
-                        <img src="/assets/screenshots/solidPlaceholder.png" class="project__thumbnail" alt="Solid Placeholder">
+                        <div class="space-around">
+                            <a href="https://www.soliddigital.com/" target="_blank"> <p class="center">Dashboard Home:<br>AFTER</p>
+                            <img src="/assets/screenshots/solidPlaceholder.png" class="project__thumbnail" alt="Solid Placeholder"></a>
+                        </div>
                     </div>
                     <div class="col-6 col-md-3">
-                        <img src="/assets/screenshots/solidPlaceholder.png" class="project__thumbnail" alt="Solid Placeholder">
+                        <div class="space-around">
+                            <a href="https://www.soliddigital.com/" target="_blank"> <p class="center">Dashboard User:<br>BEFORE</p>
+                            <img src="/assets/screenshots/solidPlaceholder.png" class="project__thumbnail" alt="Solid Placeholder"></a>
+                        </div>
                     </div>
                     <div class="col-6 col-md-3">
-                        <img src="/assets/screenshots/solidPlaceholder.png" class="project__thumbnail" alt="Solid Placeholder">
+                        <div class="space-around">
+                            <a href="https://www.soliddigital.com/" target="_blank"> <p class="center">Dashboard User:<br>AFTER</p>
+                            <img src="/assets/screenshots/solidPlaceholder.png" class="project__thumbnail" alt="Solid Placeholder"></a>
+                        </div>
                     </div>
                 </div>
             </article>
-        
+
+            {# Epicodus #}
             <article class="project project--lighter-grey">
                 <h3 class="project__title">Epicodus</h3>
                 <h4 class="project__sub-title">Web Bootcamp Student</h4>
@@ -100,15 +128,14 @@
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <div class="space-around">
-                            <a href="http://dev-whitewater.pantheonsite.io/" target="_blank"> <p class="center">Drupal 8: Whitewater</p> 
-                            <img src="/assets/screenshots/drupal8Whitewater.png" class="project__thumbnail" alt="Drupal 8 Whitewater Project"></a>
+                            <a href="http://dev-whitewater.pantheonsite.io/" target="_blank"><p class="center">Drupal 8: Whitewater</p><img src="/assets/screenshots/drupal8Whitewater.png" class="project__thumbnail" alt="Drupal 8 Whitewater Project"></a>
                         </div>
                         <p class="project__description">This was my final project for Epicodus, which was completed in about 2 days. I love Drupal so much that I decided to do my project in Drupal 8 even though it wasn't part of the curriculum.</p>
                     </div>
 
                     <div class="col-12 col-md-4">
                         <div class="space-around">
-                            <a href="http://dev-verbatim.pantheonsite.io/" target="_blank"><p class="center">Drupal 7: Verbatim</p><img src="/assets/screenshots/drupal7Verbatim.png" class="project__thumbnail space-around" alt="Drupal 7 Verbatim Project (received 1st Drupal Golden Dino)"></a>
+                            <a href="http://dev-verbatim.pantheonsite.io/" target="_blank"><p class="center">Drupal 7: Verbatim</p><img src="/assets/screenshots/drupal7Verbatim.png" class="project__thumbnail" alt="Drupal 7 Verbatim Project (received 1st Drupal Golden Dino)"></a>
                         </div>
                         <p class="project__description">I received the 1st Golden Dino Award for Drupal (decided by the instructor) for how I made the site look. Styling was not a requirement or something we were taught but it makes me happy! This was a solo Friday project for Epicodus.</p>
                     </div>
@@ -117,7 +144,7 @@
                         <div class="space-around">
                             <a href="https://whitewater-8efd7.firebaseapp.com/" target="_blank"><p class="center">Angular 2: Sunny Days</p><img src="/assets/screenshots/angularSunnyDays.png" class="project__thumbnail" alt="JavaScript/Angular 2/Firebase: Sunny Days Whitewater"></a>
                         </div>
-                        <p class="project__description">This solo Friday project incorporates TypeScript into Angular 2 and connects to Firebase for data storage. It live updates thanks to two-way data binding.</p>
+                        <p class="project__description">This solo Friday project incorporates TypeScript into Angular 2 and connects to Firebase for data storage. It live updates instantaneously thanks to two-way data binding. Note the custom favicon on the tab for the live site - not required but I made it a personal goal.</p>
                     </div>
                 </div>
 
