@@ -202,8 +202,8 @@ ul {
       text-align: justify;
     }
 
-    &__last {
-      margin-bottom: 0;
+    &__icons {
+      padding: 25px 15px 0;
     }
   }
 
@@ -314,10 +314,6 @@ ul {
     color: $white !important;
     border-radius: 5px;
   }
-
-  // &-group {
-  //   margin-bottom: 0;
-  // }
 }
 
 .social-media {
