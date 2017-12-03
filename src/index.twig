@@ -1,6 +1,6 @@
 {% include '/meta/head.twig' %}
 
-{# <section class="section about section--dark-grey" id="about">
+<section class="section about section--dark-grey" id="about">
     <div class="container">
         <div class="section__content">
             <div class="row about">
@@ -24,7 +24,7 @@
             </div>
         </div>
     </div>
-</section> #}
+</section>
 
 <section class="section portfolio section--dark-grey" id="portfolio">
     <div class="container">
@@ -156,7 +156,7 @@
     </div>
 </section>
 
-{# <section class="section skill section--dark-grey" id="skills">
+<section class="section skill section--dark-grey" id="skills">
     <div class="container">
     
         <div class="section__heading">
@@ -199,16 +199,17 @@
                         <li>Silex</li>
                         <li>Symphony</li>
                         <li>Twig</li>
+                        <li>WordPress</li>
                     </ul>
                 </div>
                 <div class="col-5 col-md-2">
                     <h5 class="list__title">Other</h5>
                     <ul>
-                        <li>JIRA / Trello</li>
                         <li>Agile</li>
-                        <li>Slack</li>
+                        <li>JIRA / Trello</li>
                         <li>Git, Github, GitLab</li>
                         <li>MySQL</li>
+                        <li>Slack</li>
                         <li>Firebase</li>
                         <li>MongoDB</li>
                         <li>Mongoose</li>
@@ -219,50 +220,58 @@
         </div>
 
     </div>
-</section> #}
+</section>
 
-{# <section class="section contact section--lightest-grey" id="contact">
+<section class="section contact section--lightest-grey" id="contact">
     <div class="container">
         <div class="section__heading">
             <h2 class="section__title">Contact Me</h2>
         </div>
         <div class="section__content">
-            <div class="row">
-                <div class="col-sm">
+            <div class="row ">
+
+                {# Form #}
+                <div class="col-12 col-md-4">
                     <form action="https://formspree.io/michaela.delight@gmail.com" method="POST" class="row">
-                        <div class="form-group col-12 col-sm-6">
+                        <div class="form-group col-12">
                             <label for="name">Name:</label>
-                            <input type="text" name="name" placeholder="Name">
-                        </div>
-                        <div class="form-group col-12 col-sm-6">
-                            <label for="email">Email:</label>
-                            <input type="email" name="_replyto" placeholder="Email">
+                            <input type="text" name="name" placeholder="First Last" class="form__input">
                         </div>
                         <div class="form-group col-12">
-                            <label for="textarea">What's up?</label>
-                            <textarea name="textarea" placeholder="What would you like to talk about?"></textarea>
+                            <label for="email">Email:</label>
+                            <input type="email" name="_replyto" placeholder="address@email.com" class="form__input">
                         </div>
-                        <div class="forg-group col">
+                        <div class="form-group col-12">
+                            <label for="textarea">What would you like to talk about?</label>
+                            <textarea name="textarea" placeholder="Looking for a developer?" class="form__input"></textarea>
+                        </div>
+                        <div class="form-group col">
                             <input type="submit" value="Send">
                         </div>
                     </form>
                 </div>
-                <div class="col-sm">
-                    <h3>Social Media</h3>
-                    <div class="social-media">
-                        <a href="https://linkedin.com/in/michaela-davis" class="social-media__link">
-                            <i class="fa fa-3x fa-linkedin-square social-media-icon" aria-hidden="true"></i>
-                        </a>
-                        <a href="https://github.com/Michaela-Davis" class="social-media__link">
-                            <i class="fa fa-3x fa-github-square social-media-icon" aria-hidden="true"></i>
-                        </a>
-                        <a href="https://www.instagram.com/handmaderevival" class="social-media__link">
-                            <i class="fa fa-3x fa-instagram social-media-icon" aria-hidden="true"></i>
-                        </a>
+
+                {# Social Media #}
+                <div class="col-12 col-md-4 social-media-background">
+                    <div class="align-vertical-center">
+                        <h3 class="center social-media-text">Social Media</h3>
+                        <div class="social-media">
+                            <a href="https://linkedin.com/in/michaela-davis" class="social-media__link">
+                                <i class="fa fa-3x fa-linkedin-square social-media-icon" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://github.com/Michaela-Davis" class="social-media__link">
+                                <i class="fa fa-3x fa-github-square social-media-icon" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.instagram.com/handmaderevival" class="social-media__link">
+                                <i class="fa fa-3x fa-instagram social-media-icon" aria-hidden="true"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <h3>P.S. This stuff is awesome!</h3>
+
+                {# Cool Stuff #}
+                <div class="col-12 col-md-4 ps">
+                    <h3 class="ps__title">P.S. This stuff is awesome!</h3>
                      <h5 class="list__title">Design</h5>
                     <ul>
                         <li><a href="http://atomicdesign.bradfrost.com/">Atomic Design</a></li>
@@ -281,7 +290,7 @@
             </div>
         </div>
     </div>
-</section> #}
+</section>
 
 </body>
 </html>
