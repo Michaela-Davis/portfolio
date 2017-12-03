@@ -258,6 +258,11 @@ ul {
     // text-indent: 25px;
   }
 
+  &__screenshot-title {
+    font-family: $font-primary;
+    letter-spacing: 2px;
+  }
+
   &__thumbnail {
     width: 300px;
     max-width: 100%;
